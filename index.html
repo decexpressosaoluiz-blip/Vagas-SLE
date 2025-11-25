@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VagaCreator AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&family=Poppins:wght@400;600;800&family=Raleway:wght@400;800&family=Orbitron:wght@500;700;900&family=Roboto+Slab:wght@400;700&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              opensans: ['Open Sans', 'sans-serif'],
+              bebas: ['Bebas Neue', 'cursive'],
+              oswald: ['Oswald', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
+              lato: ['Lato', 'sans-serif'],
+              poppins: ['Poppins', 'sans-serif'],
+              raleway: ['Raleway', 'sans-serif'],
+              orbitron: ['Orbitron', 'sans-serif'],
+              robotoslab: ['Roboto Slab', 'serif'],
+              playfair: ['Playfair Display', 'serif'],
+              dmsans: ['DM Sans', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: 'var(--color-primary)',
+                secondary: 'var(--color-secondary)',
+                text: 'var(--color-text)',
+              }
+            },
+            backgroundImage: {
+              'stripes-warning': 'repeating-linear-gradient(45deg, #000 0, #000 10px, #eab308 10px, #eab308 20px)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for sidebar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8; 
+      }
+      
+      /* Hide scrollbar for clean preview but allow scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Glassmorphism utility */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 text-slate-800 antialiased overflow-hidden h-screen w-screen">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
